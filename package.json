@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Back-end realizado para fazer a comunicação com o front-end e a app mobile.",
   "main": "server.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/marcelovbm/nlw-server"
+  },
   "engines": {
     "node": ">=12.17.0",
     "npm": ">=6.14.4"

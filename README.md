@@ -11,13 +11,13 @@ Este documento será utilizado para descrever todas as minhas anotações dos co
 - Recurso: Qual entidade estamos acessando do sistema;
 
 ## Tipos de requisições
-- GET: Busca uma ou mais informações do back-end;
-  - Exemplo: http://localhost:8080/users => Listar usuários;
-  - Exemplo: http://localhost:8080/users/1 => Buscar dados do usuário com identificador;
-- POST: Criar uma nova informação do back-end;
-  - Exemplo: http://localhost:8080/users => Criar um usuário;
-- PUT: Atualizar uma informação existente do back-end;
-- DELETE: Remover uma informação do back-end;
+- `GET`: Busca uma ou mais informações do back-end;
+  - Exemplo: `http://localhost:8080/users` => Listar usuários;
+  - Exemplo: `http://localhost:8080/users/1` => Buscar dados do usuário com identificador;
+- `POST`: Criar uma nova informação do back-end;
+  - Exemplo: `http://localhost:8080/users` => Criar um usuário;
+- `PUT`: Atualizar uma informação existente do back-end;
+- `DELETE`: Remover uma informação do back-end;
 
 ## Passagem de parâmetros
 - Request Param: Parâmetros que vem na própria rota que identificam um recurso;

@@ -25,4 +25,5 @@ routes.get('/itens', itesnController.index);
 
 routes.post('/pontos-de-coleta', pontosDeColetaController.create);
 routes.get('/pontos-de-coleta/:id', pontosDeColetaController.show);
+routes.get('/pontos-de-coleta', pontosDeColetaController.index);  
 export default routes;

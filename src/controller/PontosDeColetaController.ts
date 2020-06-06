@@ -3,10 +3,27 @@ import { Request, Response } from 'express';
 
 class PontosDeColetaController {
 
+    async index (request: Request, response: Response ) {
+        const { cidade, uf, itens } = request.query;
+
+        const itensArray = String(itens).split(',').map(item => Number(item.trim()));
+
+        const pontos_de_coleta = await knex('pontos_de_coleta')
+        .join('pontos_de_coleta_itens', 'pontos_de_coleta.id', '=', 'pontos_de_coleta_itens.id_pontos_de_coleta')
+        .whereIn('pontos_de_coleta_itens.id_itens', itensArray)
+        .where('pontos_de_coleta.cidade', String(cidade))
+        .where('pontos_de_coleta.uf', String(uf))
+        .distinct()
+        .select('pontos_de_coleta.*');
+
+        return response.status(200).json( pontos_de_coleta );
+
+    }
+
     async create (request: Request, response: Response) {
-        const {
+        const { 
             email,
-            nome,
+            nome, 
             rua,
             numero,
             cidade,

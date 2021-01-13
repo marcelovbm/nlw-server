@@ -14,7 +14,7 @@ const itesnController = new ItensController();
  * @author Marcelo Villas Bôas Magrinelli
  */
 routes.get('/health', (request, response) => {
-    return response.status(200).json({message: 'Ok'});
+    return response.status(200).json({message: 'O'});
 });
 
 /**
